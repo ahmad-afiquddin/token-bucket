@@ -20,10 +20,15 @@ tokenbucket.py: Contains 3 classes, Error429, User, and Server
 tests.py: After initializing 2 users with api keys user001 and user002, 6 test cases are run
 
 1: Making a request on both users. Expecting success for both
+
 2: Making 98 requests on both users. Expceting success for all requests.
+
 3: Making the 100th request in the same hour. Expecting success.
+
 4: Making a request after limit is reached. Expecting Error 429
+
 5: Wait for time limit then make a new request. Expecting success since bucket has been refilled
+
 6: Making another request. Expecting success since the bucket has been refilled with 100 tokens
 
 Tests shows that there are no overlaps between users, and token bucket is successful
